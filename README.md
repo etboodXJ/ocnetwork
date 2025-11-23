@@ -113,7 +113,13 @@ In the world of decentralized finance, Yield Farmer bots are the new digital com
 - 🔐 **Secure Wallet Integration** - Each bot comes with its own dedicated wallet
 - ⏰ **Scheduled Transfers** - Automated profit distribution and rebalancing
 
-**Yield Farmer Experience:**
+**🔐 Bot Publishing Permissions:**
+- 👑 **Admin-Only Publishing** - Currently, only administrators can publish yield bots to ensure quality and security
+- 🚀 **Developer Access Coming Soon** - We're working on expanding publishing permissions to qualified developers
+- 🛡️ **Quality Assurance** - All bots undergo thorough review before marketplace listing
+- 📋 **Verification Process** - Ensuring only high-performing, secure bots are available to traders
+
+**Trading Experience:**
 - 🛒 **Easy Discovery** - Browse bots by performance, strategy, or popularity
 - 💳 **Flexible Payment** - Pay with your preferred cryptocurrency
 - 📈 **Live Updates** - Watch your bots' performance in real-time
@@ -147,7 +153,7 @@ In the world of decentralized finance, Yield Farmer bots are the new digital com
 - 🏦 **Bot Wallets** - Each bot has its own on-chain wallet for secure fund management
 - ⏰ **Scheduled Operations** - Time-locked transfers and automated actions
 - 📈 **Performance Tracking** - On-chain recording of all bot activities
-- 🎮 **Marketplace Logic** - Decentralized Yield Farmer and auction mechanisms
+- 🎮 **Marketplace Logic** - Decentralized trading and auction mechanisms
 
 ### 🌊 Walrus Storage - Public Knowledge Base
 
@@ -159,7 +165,7 @@ In the world of decentralized finance, Yield Farmer bots are the new digital com
 
 **Storage Benefits:**
 - 🚀 **High Performance** - Fast retrieval of large datasets
-- 💰 **Cost Effective** - Optimized storage for blockchain applications
+- 💰 **Cost-Effective** - Optimized storage for blockchain applications
 - 🔄 **Version Control** - Track changes and improvements over time
 - 🌐 **Global Access** - Available to anyone, anywhere in the world
 
@@ -215,7 +221,7 @@ VITE_WALRUS_ENDPOINT=your-walrus-endpoint
 ```env
 AGENT_PRIVATE_KEY=your-secure-private-key
 CONTRACT_PACKAGE_ID=0xyour-contract-package
-ENABLE_AUTO_Yield Farmer=true
+ENABLE_AUTO_YIELD_FARMER=true
 MAX_TRADE_AMOUNT_SUI=1000
 MIN_PROFIT_THRESHOLD=0.1
 ```
@@ -329,4 +335,3 @@ OCNetwork is more than just a Yield Farmer platform – it's a living ecosystem 
 *Last Updated: November 22, 2025*
 *Version: 1.0.0*
 *License: MIT*
-
