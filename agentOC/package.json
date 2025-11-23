@@ -1,0 +1,42 @@
+{
+  "name": "agent-oc",
+  "version": "1.0.0",
+  "description": "Agent OC - Sui Object Trading Bot",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "chat": "ts-node src/chat.ts",
+    "chat:build": "tsc && node dist/chat.js",
+    "test:chat": "ts-node src/test-chat.ts",
+    "test:build": "tsc && node dist/test-chat.js"
+  },
+  "keywords": [
+    "sui",
+    "bot",
+    "trading",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@mysten/sui": "^1.44.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "node-cron": "^3.0.0",
+    "winston": "^3.11.0",
+    "openai": "^4.28.0",
+    "inquirer": "^9.2.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/node-cron": "^3.0.0",
+    "@types/inquirer": "^9.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
