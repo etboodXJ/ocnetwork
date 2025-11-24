@@ -60,7 +60,7 @@ class ChatMode {
       }
 
       // 设置用户地址（如果有的话）
-      if (this.keypair) {
+      if (this.keypair && this.chatInterface) {
         const userAddress = this.keypair.getPublicKey().toSuiAddress();
         this.chatInterface.setUserAddress(userAddress);
         console.log(`👛 User address: ${userAddress}`);
