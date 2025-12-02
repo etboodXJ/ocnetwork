@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { ConnectButton, useCurrentAccount, useSignAndExecuteTransaction } from '@mysten/dapp-kit';
+import { ConnectButton, useCurrentAccount, useSignAndExecuteTransaction, useSignPersonalMessage } from '@mysten/dapp-kit';
 import ObjectMarketplace from './components/ObjectMarketplace';
 import AdminPage from './components/AdminPage';
 import WalletInfo from './components/WalletInfo';
 import DebugBalance from './components/DebugBalance';
+import MessageSigner from './components/MessageSigner';
 import { NetworkSelector } from './components/NetworkSelector';
 import LanguageSelector from './components/LanguageSelector';
 import { NetworkType, getDefaultNetwork } from './config/networkConfig';
@@ -18,7 +19,7 @@ function App() {
   const { t } = useLanguage();
   const isConnected = !!currentAccount;
   const [currentNetwork, setCurrentNetwork] = useState<NetworkType>(getDefaultNetwork());
-  const [currentPage, setCurrentPage] = useState<'marketplace' | 'admin' | 'debug'>('marketplace');
+  const [currentPage, setCurrentPage] = useState<'marketplace' | 'admin' | 'debug' | 'signature'>('marketplace');
   const [isAdmin, setIsAdmin] = useState(false);
   const [adminLoading, setAdminLoading] = useState(true);
 
@@ -149,6 +150,12 @@ function App() {
                         🛡️ {t('nav.admin')}
                       </button>
                     )}
+                    <button
+                      onClick={() => setCurrentPage('signature')}
+                      className={`nav-button ${currentPage === 'signature' ? 'active' : ''}`}
+                    >
+                      🔐 签名
+                    </button>
                     {/* <button
                       onClick={() => setCurrentPage('debug')}
                       className={`nav-button ${currentPage === 'debug' ? 'active' : ''}`}
@@ -190,6 +197,8 @@ function App() {
               <ObjectMarketplace key={currentNetwork} currentNetwork={currentNetwork} />
             ) : currentPage === 'admin' ? (
               <AdminPage key={currentNetwork} currentNetwork={currentNetwork} />
+            ) : currentPage === 'signature' ? (
+              <MessageSigner key={currentNetwork} />
             ) : currentPage === 'debug' ? (
               <DebugBalance key={currentNetwork} currentNetwork={currentNetwork} />
             ) : (
