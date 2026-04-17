@@ -330,6 +330,9 @@ OCNetwork is more than just a Yield Farmer platform – it's a living ecosystem 
 
 *The future of automated Yield Farmer is here. Welcome to OCNetwork! 🤖*
 
+[CN](./README_CN.md)
+
+
 ---
 
 *Last Updated: November 22, 2025*
